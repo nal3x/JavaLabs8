@@ -4,13 +4,13 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-class ConvTemp2 extends JFrame implements ActionListener  {
+class TempConvert extends JFrame implements ActionListener  {
     private JPanel row1, row2, row3;
     private JLabel Celsius_Label, Fahr_Label;
     private JTextField Celsius, Fahr;
     private JButton calculateButton, resetButton;
 
-    public ConvTemp2() {
+    public TempConvert() {
         super("Celsius to Fahrenheit");
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -37,29 +37,20 @@ class ConvTemp2 extends JFrame implements ActionListener  {
 
         Container pane = getContentPane();
 
-        // Ο grid layout manager παρέχει ευελιξία στην τοποθέτηση components. 
-        // Δημιουργείτε o διαχειριστής τοποθέτησης δίνοντας το πλήθος των 
-        // γραμμών και των στηλών. Τα components θα γεμίσουν τα κελιά που 
-        // ορίζει ο διαχειριστής.
-
         GridLayout layout=new GridLayout(3,1);
         pane.setLayout(layout);
         FlowLayout flowlayout = new FlowLayout();
 
-
-        //Prwti grammi
         row1.setLayout(flowlayout);
         row1.add(Celsius_Label);
         row1.add(Celsius);
         pane.add(row1);
 
-        //Deuteri grammi
         row2.setLayout(flowlayout);
         row2.add(calculateButton);
         row2.add(resetButton);
         pane.add(row2);
 
-        //Triti grammi
         row3.setLayout(flowlayout);
         row3.add(Fahr_Label);
         row3.add(Fahr);
@@ -86,8 +77,8 @@ class ConvTemp2 extends JFrame implements ActionListener  {
     }
 }
 
-public class ConvTempTest {
+public class Temperature {
     public static void main(String[] args) {
-        ConvTemp2 a=new ConvTemp2();
+        TempConvert a=new TempConvert();
     }
 }
