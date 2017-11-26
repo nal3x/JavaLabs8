@@ -60,10 +60,11 @@ public class ConvTemp extends JFrame {
         setContentPane(pane);
         pack();
         
-        /* The event handling class can be any class which implements the 
-         *  ActionListener interface. In this case it is not our class (this)
-         *  but an anonymous inner class.        
-        */
+        /*The calculate JButton is registered as a listener for the action 
+        events that buttons fire. Once calculate JButton has been registered
+        using the Button addActionListener method, the actionPerformed method
+        is called every time the button is clicked.*/
+        
         calculate.addActionListener(new ActionListener(){
                 public void actionPerformed(ActionEvent e){
                     double cel = Double.parseDouble(Celsius.getText());
@@ -72,6 +73,11 @@ public class ConvTemp extends JFrame {
                 }   
             }
         );
+        
+        /* The event handling class can be any class which implements the 
+         *  ActionListener interface. In this case it is not our class (this)
+         *  but an anonymous inner class.        
+        */
 
         reset.addActionListener(new ActionListener(){
                 public void actionPerformed(ActionEvent e){
