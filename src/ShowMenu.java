@@ -27,6 +27,7 @@ public class ShowMenu extends JFrame {
         fileM = new JMenu("Αρχείο");
         fileNew = new JMenuItem("Νέο");
         fileNew.addActionListener(handler);
+        fileNew.setActionCommand(wtf());
         fileM.add(fileNew);
         fileExit = new JMenuItem("Έξοδος");       
         fileExit.addActionListener(handler);
@@ -60,8 +61,13 @@ public class ShowMenu extends JFrame {
         setContentPane(pane);
          pack();
      }
+    
+    private String wtf() {
+        return String.format("%010d", 0).replace("0","WTF ");
+    }
 
-
+//getActionCommand() gives you a String representing the action command.
+//The value is component specific! We can use setActionCommand(String command)
 class MenuHandler implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource()==fileExit)
