@@ -60,6 +60,10 @@ public class ConvTemp extends JFrame {
         setContentPane(pane);
         pack();
         
+        /* The event handling class can be any class which implements the 
+         *  ActionListener interface. In this case it is not our class (this)
+         *  but an anonymous inner class.        
+        */
         calculate.addActionListener(new ActionListener(){
                 public void actionPerformed(ActionEvent e){
                     double cel = Double.parseDouble(Celsius.getText());
