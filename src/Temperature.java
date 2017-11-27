@@ -4,7 +4,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-class TempConvert extends JFrame implements ActionListener  {
+class TempConvert extends JFrame implements ActionListener  {//
     private JPanel row1, row2, row3;
     private JLabel Celsius_Label, Fahr_Label;
     private JTextField Celsius, Fahr;
